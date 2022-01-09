@@ -1,5 +1,8 @@
 # Ionization data parsing from different measuring devices
-These scripts parse data files into pandas.DataFrame objects and plot time-aligned graphs
+These scripts parse data files into pandas.DataFrame objects and plot time-aligned graphs.
+
+Checked with python 3.6.6
+
 
 ### Boltek Electric Field Meter EFM-100
 [https://www.boltek.com/product/efm-100c-electric-field-monitor](https://www.boltek.com/product/efm-100c-electric-field-monitor)
