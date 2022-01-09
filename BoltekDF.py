@@ -1,6 +1,7 @@
 import pandas
 import matplotlib.pyplot as plt
 from datetime import datetime
+from .BaseDF import BaseDF
 
 
 class BoltekDF(BaseDF):

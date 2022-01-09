@@ -37,7 +37,7 @@ class BaseDF(ABC, pandas.DataFrame):
     
     ''' plot  name: (xs, ys, y_interval)'''
     @staticmethod
-    def align_plots(plots, suptitle, major_minutes_interval=20, minor_minutes_interval=5)
+    def align_plots(plots, suptitle, major_minutes_interval=20, minor_minutes_interval=5):
         fig = plt.figure(figsize=(10, 4*len(plots)), dpi=80) # plot size
         fig.suptitle(suptitle, fontsize=16)
         gs = gridspec.GridSpec(len(plots), 1)
