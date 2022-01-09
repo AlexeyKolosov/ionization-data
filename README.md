@@ -1,8 +1,13 @@
 # Ionization data parsing from different measuring devices
 These scripts parse data files into pandas.DataFrame objects and plot time-aligned graphs.
 
+Requirements:
+
+pip install requirements.txt
+
 Checked with python 3.6.6
 
+add path/to/ionization_data into system variables PYTHONPATH
 
 ### Boltek Electric Field Meter EFM-100
 [https://www.boltek.com/product/efm-100c-electric-field-monitor](https://www.boltek.com/product/efm-100c-electric-field-monitor)
