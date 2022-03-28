@@ -35,7 +35,7 @@ class BaseDF(ABC, pandas.DataFrame):
     def unite_dfs(dfs):
         return pandas.concat(dfs)
     
-    ''' plot  name: (xs, ys, y_interval)'''
+    ''' plot  name: (xs, ys, y_interval, y_lims)'''
     @staticmethod
     def align_plots(plots, suptitle, major_minutes_interval=20, minor_minutes_interval=5):
         fig = plt.figure(figsize=(10, 4*len(plots)), dpi=80) # plot size
@@ -44,10 +44,13 @@ class BaseDF(ABC, pandas.DataFrame):
         index = 0
         sharex = None
         for plot_title, data in plots.items():
+        # todo unpack data
             ax = plt.subplot(gs[index], sharex = sharex)
             ax.plot(data[0], data[1], color='black')
             ax.set_title(plot_title, loc='right', fontsize=8)
             ax.yaxis.set_major_locator(ticker.MultipleLocator(data[2]))
+            if(len(data) > 3):
+                ax.set_ylim(data[3])
             ax.grid(which='major', alpha=0.8)
             ax.grid(which='minor', alpha=0.8) 
             if sharex is None:
